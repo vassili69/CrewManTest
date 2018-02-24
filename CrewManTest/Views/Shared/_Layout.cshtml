@@ -20,19 +20,26 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <img src="~/images/logo_gestaodetripulantes.png" alt="Sample Image" width="165px" />
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">CrewManTest</a>
+
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Alerts">Alerts</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="CrewMembers">Crew Members</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="CrewChange">Crew Change</a></li>
+                   
+                    <li></li>
+
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - CrewManTest</p>
+            <p>&copy; 2018 - CrewManagerTest by PSR e IVO</p>
         </footer>
     </div>
 
