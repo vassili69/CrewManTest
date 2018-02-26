@@ -36,6 +36,10 @@ namespace CrewManTest.Controllers
             model.Num = 45138;
             return View(model);
         }
+        public IActionResult CrewMembers()
+        {
+            return View();
+        }
 
         public IActionResult Error()
         {

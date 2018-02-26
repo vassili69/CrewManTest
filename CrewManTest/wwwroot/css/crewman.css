@@ -1,0 +1,2574 @@
+﻿/*
+============================================================
+REFERÊNCIAS:
+
+Azul forte #0099FF
+Azul fraco #99CCFF
+
+Laranja forte #FF6600
+Laranja fraco #FF9966
+
+Fonte texto do conteúdo: 14px arial, sans-serif; color: #333333;
+
+Shadow:
+box-sizing: border-box;
+border: 1px #0099FF solid;
+box-shadow: 0px 0px 1px 1px #ccc;	
+============================================================
+*/
+
+
+body {
+    margin: 0;
+}
+
+.logotipo {
+    text-indent: 40px;
+    width: 300px;
+    height: 60px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+
+/*
+============================================================
+Menu lista
+============================================================
+*/
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.menu_login_selecionado ul li { /*lista para item selecionado */
+    background-image: url(../imgs/menu_login.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_alertas_selecionado ul li { /*lista para item selecionado */
+    background-image: url(../imgs/menu_alertas.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_tripulantes_selecionado ul li { /*lista para item selecionado */
+    background-image: url(../imgs/menu_tripulantes.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_rendicoes_selecionado ul li { /*lista para item selecionado */
+    background-image: url(../imgs/menu_rendicoes.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_alertas ul li { /*lista para item nao selecionado */
+    background-image: url(../imgs/menu_alertas.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_tripulantes ul li { /*lista para item nao selecionado */
+    background-image: url(../imgs/menu_tripulantes.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_rendicoes ul li { /*lista para item nao selecionado */
+    background-image: url(../imgs/menu_rendicoes.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.menu_sair ul li { /*lista para item nao selecionado */
+    background-image: url(../imgs/menu_sair.png);
+    background-repeat: no-repeat;
+    background-position: 40px;
+    padding-left: 40px;
+    line-height: 40px;
+}
+
+.lado_menu { /* pormenor do item de menu selecionado*/
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: -10px;
+    top: 0px;
+    background: url(../imgs/lado_menu.png);
+    background-repeat: no-repeat;
+}
+
+.menu_login_selecionado {
+    background-color: #0099FF;
+    font: 16px arial, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+    //margin-bottom: 10px;
+}
+
+.menu_alertas_selecionado {
+    background-color: #0099FF;
+    font: 16px arial, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+    //margin-bottom: 10px;
+}
+
+.menu_alertas {
+    background-color: #000;
+    font: 16px arial, sans-serif;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.menu_tripulantes_selecionado {
+    background-color: #0099FF;
+    font: 16px arial, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+    //margin-bottom: 10px;
+}
+
+.menu_tripulantes {
+    background-color: #000;
+    font: 16px arial, sans-serif;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.menu_rendicoes_selecionado {
+    background-color: #0099FF;
+    font: 16px arial, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+    //margin-bottom: 10px;
+}
+
+.menu_rendicoes {
+    background-color: #000;
+    font: 16px arial, sans-serif;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.menu_sair {
+    background-color: #000;
+    font: 16px arial, sans-serif;
+    color: #FFF;
+    font-weight: normal;
+    text-indent: 40px;
+    height: 40px;
+    position: relative;
+    padding-top: 50px;
+}
+
+a.menu_link:link, a.menu_link:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+a.menu_link:hover, a.menu_link:active {
+    color: #0099FF;
+    //border-right: 6px solid #0099FF; /* #0099FF  99CCFF*/
+    width: 100%;
+    display: block;
+    //box-sizing: border-box;
+}
+
+a.menu_link_selecionado:link, a.menu_link_selecionado:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    min-width: 200px;
+}
+
+a.menu_link_selecionado:hover, a.menu_link_selecionado:active {
+    color: #99CCFF;
+    //border-right: 6px solid #0099FF; /* #0099FF  99CCFF*/
+    width: 100%;
+    display: block;
+    //box-sizing: border-box;
+}
+
+.geral { /* 100% de altura e largura geral fixed=janela browser*/
+    background: #fff;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+.div_geral_esquerda { /* divisão horizontal esquerda com 25% de 100% do geral */
+    width: 25%;
+    height: 100%;
+    background: #000;
+    float: left;
+    border-right: solid 10px #FFF;
+    box-sizing: border-box;
+}
+
+.div_geral_direita { /* divisão horizontal direita-centro com 75% de 100% do geral */
+    position: relative;
+    width: 75%;
+    height: 100%;
+    background: #FFF;
+    float: left;
+    overflow: auto; /* garante scroll automático se necessário */
+}
+
+
+.azul14 { /* olá utilizador */
+    display: block;
+    font-family: Arial;
+    font-size: 14px;
+    color: #0099FF;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+/*
+============================================================
+divisão horizontal direita-centro com 75% de 100% do geral
+============================================================ 
+*/
+.div_geral_direita_90 {
+    margin: auto;
+    width: 90%;
+    background-color: #FFFFFF;
+    padding-top: 50px;
+}
+
+.div_direita_topo_header {
+    font: 40px arial, sans-serif;
+    color: #666666;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px #EEEEEE solid;
+    margin-bottom: 30px;
+}
+
+
+/*
+============================================================
+login
+============================================================
+ */
+
+.form_login {
+    width: 250px;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.msg_erro {
+    font: 16px arial, sans-serif;
+    color: #FF2200;
+    padding-top: 30px;
+    float: left;
+    clear: both;
+}
+
+.moldura_login {
+    background-color: #FFFFFF;
+    width: 250px;
+    border: 1px solid #0099FF;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.inp_login {
+    font: 16px arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-indent: 10px;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+/* 
+============================================================
+lembrete
+============================================================
+ */
+.div_lembrete_geral {
+    width: 99%;
+    background-color: #FFFFBF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    box-shadow: 3px 2px 4px #999999;
+}
+
+.div_lembrete_geral_header {
+    font-weight: bold;
+    font: 22px arial, sans-serif;
+    color: #666666;
+    background-color: #FFFF99;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.div_lembrete_geral_texto {
+    font: 14px arial, sans-serif;
+    color: #000000;
+    background-color: #FFFFBF;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+/* ============================================================
+altura 40px no fim do conteúdo
+ */
+.altura_40_direita_fim {
+    height: 40px;
+    background-color: #FFFFFF;
+}
+
+
+/* ============================================================
+tripulantes
+ */
+
+.btn_criar_novo { /* ainda não utilizado */
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    display: block;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/tripulantes_editar.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 25px;
+}
+
+
+a.caixa_btn_criar_novo:link, a.caixa_btn_criar_novo:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/tripulantes_criar_novo.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 38px;
+}
+
+a.caixa_btn_criar_novo:hover, a.caixa_btn_criar_novo:active {
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    //border: 1px #0099FF solid;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+.moldura_tripulantes_pesquisa { /* moldura caixa pesquisa */
+    background-color: #FFFFFF;
+    width: 100%;
+    border: 1px solid #0099FF;
+    height: 40px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.inp_tripulantes_pesquisa {
+    font: 16px arial, sans-serif;
+    border: 1px #999999 solid;
+    height: 38px;
+    width: 90%;
+    background-color: #FFF;
+    text-indent: 10px;
+    border: none;
+    //margin: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+.btn_tripulantes_pesquisa {
+    background-color: #FFFFFF;
+    background-image: url('../imgs/lupa.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 32px;
+    height: 38px;
+    cursor: pointer;
+    border: none;
+    display: block;
+    //float: right;
+    //margin-right: 10px;
+}
+
+.area_botao_e_pesquisa {
+    width: 570px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.area_botao_e_pesquisa_2 { /* botão */
+    width: 140px;
+    float: left;
+}
+
+.area_botao_e_pesquisa_3 {
+    width: 430px;
+    float: right;
+    display: block;
+    position: relative;
+}
+
+
+
+
+/*
+========================================================
+Alfabeto
+========================================================
+*/
+
+.alfabetofont {
+    font: 22px arial, sans-serif;
+    color: #999999;
+    text-align: justify;
+}
+
+.alfabetoborder {
+    background-color: #FAFAFA;
+    border: 1px #EEEEEE solid;
+    padding: 8px;
+}
+
+.span_alfabeto { /* span para esticar area */
+    width: 100%;
+    display: inline-block;
+}
+
+a.alfabeto_link:link, a.alfabeto_link:visited {
+    color: #999999;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.alfabeto_link:hover, a.alfabeto_link:active {
+    color: #0099FF;
+    text-decoration: none;
+    font-weight: bold;
+    //background-color: #0099FF;
+}
+/*
+==============================================
+Listagem nomes
+==============================================
+*/
+
+ul.listagem_nomes {
+    list-style-type: none;
+    font: 15px arial, sans-serif;
+    color: #000000;
+    padding-left: 10px;
+}
+
+    ul.listagem_nomes li {
+        display: block;
+        padding-top: 8px;
+    }
+
+        ul.listagem_nomes li a:link, ul.listagem_nomes li a:visited {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        ul.listagem_nomes li a:hover, ul.listagem_nomes li a:active {
+            text-decoration: none;
+            color: #0099FF; /* FF6600 0099FF */
+            //font-weight: bold;
+        }
+
+
+/*
+============================================================
+Tripulantes - Ver um tripulante
+============================================================
+ */
+
+
+.area_botoes_nome_foto {
+    width: 710px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.area_botao_editar { /* botão imprimir*/
+    width: 140px;
+    float: left;
+}
+
+.area_botao_print { /* botão imprimir*/
+    width: 140px;
+    float: left;
+}
+
+a.caixa_btn_tripulantes_print:link, a.caixa_btn_tripulantes_print:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/tripulantes_print.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 55px;
+    margin-top: 25px;
+}
+
+a.caixa_btn_tripulantes_print:hover, a.caixa_btn_tripulantes_print:active {
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+a.caixa_btn_tripulantes_editar:link, a.caixa_btn_tripulantes_editar:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/tripulantes_editar.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 50px;
+    margin-top: 25px;
+}
+
+a.caixa_btn_tripulantes_editar:hover, a.caixa_btn_tripulantes_editar:active {
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    //border: 1px #0099FF solid;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+.area_tripulantes_nome { /* area com o nome do tripulante */
+    width: 300px;
+    font: 22px arial, sans-serif;
+    color: #666666;
+    text-align: center;
+    height: 40px;
+    margin-top: 30px;
+    float: left;
+}
+
+a.foto_btn_tripulantes:link, a.foto_btn_tripulantes:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/tripulantes_editar.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 50px;
+}
+
+a.foto_btn_tripulantes:hover, a.foto_btn_tripulantes:active {
+    color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    //border: 1px #0099FF solid;
+}
+
+.imagem_tripulante {
+    height: 100px;
+    width: 100px;
+    float: right;
+    border: none;
+    border-radius: 100%;
+}
+
+a.imagem_link_tripulante:link, a.imagem_link_tripulante:visited {
+    height: auto;
+    width: auto;
+    float: right;
+    border: none;
+    border-radius: 100%;
+}
+
+a.imagem_link_tripulante:hover, a.imagem_link_tripulante:active {
+    //border: 2px #99CCFF solid;
+    //box-sizing: border-box;
+    //border-radius: 100%;
+    //opacity: 0.8;
+    box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+/* Imagem tripulante - Editar */
+.imagem_tripulante_editar {
+    height: 100px;
+    width: 100px;
+    float: right;
+    border: none;
+    border-radius: 100%;
+}
+
+a.imagem_link_tripulante_editar:link, a.imagem_link_tripulante_editar:visited {
+    height: auto;
+    width: auto;
+    float: right;
+    border: none;
+    border-radius: 100%;
+    //box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+a.imagem_link_tripulante_editar:hover, a.imagem_link_tripulante_editar:active {
+    //border: 2px #99CCFF solid;
+    //box-sizing: border-box;
+    //border-radius: 100%;
+    //opacity: 0.8;
+    box-sizing: border-box;
+    border: 1px #FF6600 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+.imagem_link_tripulante_editar:link:after {
+    //border: 1px solid #fc0;
+    //padding: 20px 20px;
+    //background: #fffea1;
+    content: url(../imgs/adicionar.png);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
+
+
+
+
+/*
+=======================================================
+Barra cinza topo para expandir/esconder conjunto dados
+=======================================================
+*/
+
+
+a.div_titulo_barra_area_3:link, a.div_titulo_barra_area_3:visited {
+    font: 20px arial, sans-serif;
+    color: #FF6600;
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background: #FF2200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px #EEEEEE solid;
+    background-color: #FAFAFA;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+a.div_titulo_barra_area_3:hover, a.div_titulo_barra_area_3:active {
+    font: 20px arial, sans-serif;
+    color: #FF6600;
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background: #FF2200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px #EEEEEE solid;
+    background-color: #FAFAFA;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+
+
+
+.div_titulo_barra_area_3 {
+    font: 20px arial, sans-serif;
+    color: #FF6600;
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background: #FF2200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px #EEEEEE solid;
+    background-color: #FAFAFA;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+.div_titulo_barra_area_2 {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 66.663%;
+    //background:#FF2200;
+}
+
+
+.div_titulo_barra_coluna1 {
+    float: left;
+    //width:58.66%;
+    width: 62.66%;
+    position: relative;
+    left: 68.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+
+
+/*
+=======================================================
+Conteúdo dos dados do tripulante
+=======================================================
+*/
+.titulo_dados { /*cinza, exemplo: Rank*/
+    font: 14px arial, sans-serif;
+    color: #999999;
+    //padding-bottom: 3px;
+}
+
+a.titulo_dados:link, a.titulo_dados:visited {
+    font: 14px arial, sans-serif;
+    color: #999999;
+    //padding-bottom: 3px;
+    text-decoration: none;
+}
+
+a.titulo_dados:hover, a.titulo_dados:active {
+    font: 14px arial, sans-serif;
+    color: #0099FF;
+    //padding-bottom: 3px;
+    text-decoration: none;
+}
+
+
+
+.texto_dados { /*preto, exemplo: Master*/
+    font: 14px arial, sans-serif;
+    color: #333333;
+}
+
+/*
+==============================
+linha com 2 Colunas
+==============================
+*/
+
+.div_area_3_2col {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    //background:#FF2200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px #EEEEEE solid;
+}
+
+.div_area_2_2col {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 66.663%;
+    //background:#FF2200;
+}
+
+
+.div_coluna1_2col {
+    float: left;
+    width: 62.66%;
+    position: relative;
+    left: 68.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna3_2col {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    //left:76.67%;
+    left: 72.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+
+
+
+/*
+==============================
+linha com 3 Colunas
+==============================
+*/
+
+.div_area_3_3col_ultima { /* Para a última linha do conjunto ficar com padding-bottom e sem bottom-border */
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    //background:#FF2200;
+    //border-bottom: 1px #EEEEEE solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //border: 1px #FF2200 solid;
+}
+
+
+.div_area_3_3col {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px #EEEEEE solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_3col {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 33.333%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_3col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 33.33%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_coluna1_3col {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 68.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna2_3col {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 72.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna3_3col {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 76.67%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+/*
+===============================================
+Linha com 6 Colunas - Tripulantes - Ver - Azul
+===============================================
+*/
+
+.div_area_6_6col_cabecalho {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    //background-color: #FAFAFA;
+}
+
+.div_area_6_6col {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+
+.div_area_5_6col {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_6col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_3_6col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_6col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_6col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+
+
+
+
+/*
+=============================================
+Checkbox só para referência, para apagar
+=============================================
+*/
+.checkbox { /* pseudo-checkbox*/
+    width: 15px;
+    height: 15px;
+    border: 1px #0099FF solid;
+}
+
+
+
+.div_coluna1_6col {
+    float: left;
+    //width:29.33%;
+    //width:14.665%;
+    //width:16%;
+    width: 12%;
+    position: relative;
+    //left:68.67%;
+    //left:84%;
+    left: 85%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+
+
+.div_coluna2_6col {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:84.5%;
+    left: 78%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_6col {
+    float: left;
+    //width:29.33%;
+    //width:16%;
+    width: 20%;
+    position: relative;
+    //left:85%;
+    left: 82%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+
+.div_coluna4_6col {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.3%;
+    left: 83%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+.div_coluna5_6col {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.9%;
+    left: 85%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna6_6col {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:86.4%;
+    //left:86.9%;
+    left: 90%;
+    overflow: hidden;
+    //background:#000;
+}
+
+/*
+=================================================
+Botão flutuante download
+=================================================
+*/
+.area_botao_download { /* botão imprimir*/
+    width: 160px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+a.caixa_btn_download:link, a.caixa_btn_download:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 160px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF; /* 666666 */
+    background-image: url("../imgs/download.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 40px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 3px 1px #999999;
+    border: 1px #FFFFFF solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_download:hover, a.caixa_btn_download:active {
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    //border: 1px #0099FF solid;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+/*
+=================================================
+Paginação Ver - Azul
+=================================================
+*/
+
+.area_paginacao {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    float: left;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ============= Botão seleccionado - Azul =========== */
+
+a.caixa_btn_paginacao_selecionado:link, a.caixa_btn_paginacao_selecionado:visited {
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    background-color: #0099FF; /* 666666 */
+    line-height: 40px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_paginacao_selecionado:hover, a.caixa_btn_paginacao_selecionado:active {
+    margin-bottom: 1px;
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+/* ============= Botão por seleccionar - Azul =========== */
+
+a.caixa_btn_paginacao:link, a.caixa_btn_paginacao:visited {
+    margin-bottom: 2px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #0099FF;
+    width: 40px;
+    height: 40px;
+    background-color: #FAFAFA;
+    line-height: 40px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_paginacao:hover, a.caixa_btn_paginacao:active {
+    margin-bottom: 2px;
+    color: #FFFFFF;
+    background-color: #99CCFF;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+
+/* ============= Botão seleccionado - Laranja =========== */
+
+a.caixa_btn_paginacao_selecionado_laranja:link, a.caixa_btn_paginacao_selecionado_laranja:visited {
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FAFAFA;
+    width: 40px;
+    height: 40px;
+    background-color: #FF6600; /* 666666 */
+    line-height: 40px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_paginacao_selecionado_laranja:hover, a.caixa_btn_paginacao_selecionado_laranja:active {
+    margin-bottom: 1px;
+    //color: #0066CC;
+    background-color: #FF9966;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #FF6600 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+/* ============= Botão por seleccionar - Laranja =========== */
+
+a.caixa_btn_paginacao_laranja:link, a.caixa_btn_paginacao_laranja:visited {
+    margin-bottom: 2px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FF6600;
+    width: 40px;
+    height: 40px;
+    background-color: #FAFAFA;
+    line-height: 40px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_paginacao_laranja:hover, a.caixa_btn_paginacao_laranja:active {
+    margin-bottom: 2px;
+    color: #FFFFFF;
+    background-color: #FF9966;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #FF6600 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+
+/*
+============================================================
+Linha com 7 Colunas - Evaluation editar
+============================================================
+*/
+
+.div_area_7_7col_cabecalho {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    background-color: #FAFAFA;
+}
+
+.div_area_7_7col_exp_cabecalho { /* para cabecalho de conteudo expandido */
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    //border-top: 1px #EEEEEE solid;
+    //background-color: #FAFAFA;
+}
+
+.div_area_7_7col_exp {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 2px;
+    //border-top: 1px #EEEEEE solid;
+    padding-bottom: 10px;
+}
+
+
+.div_area_7_7col {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+
+
+.div_area_6_7col_cabecalho {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+.div_area_6_7col {
+    padding-bottom: 10px;
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_5_7col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_7col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_7col_exp { /* area para conteúdo expandido */
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 56.88%; /* soma de (14.22%*3) em falta + 14.22 desta */
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+
+.div_area_3_7col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.28%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_7col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_7col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 14.22%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+/*
+=============================================
+Checkbox só para referência, para apagar
+=============================================
+*/
+.checkbox { /* pseudo-checkbox*/
+    width: 15px;
+    height: 15px;
+    border: 1px #0099FF solid;
+}
+
+
+.div_coluna1_7col {
+    float: left;
+    //width:12.57%;
+    width: 4.57%;
+    position: relative;
+    left: 87%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna2_7col {
+    float: left;
+    //width:12.57%;
+    width: 5.57%;
+    position: relative;
+    left: 87.5%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_7col {
+    float: left;
+    width: 20.57%;
+    position: relative;
+    left: 90%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+.div_coluna3_7col_exp { /*especial para cabecalho espandido */
+    float: left;
+    width: 20.57%;
+    position: relative;
+    left: 90%;
+    overflow: hidden;
+    background-color: #FAFAFA;
+}
+
+
+.div_coluna4_7col {
+    float: left;
+    //width:12.57%;
+    width: 20.57%;
+    position: relative;
+    left: 92%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+
+.div_coluna4_7col_exp { /* area para conteúdo expandido 54.28 = 20.57 + 12.57 + 8.57 + 12.57 */
+    float: left;
+    //width:12.57%;
+    //width:20.57%;
+    width: 54.28%;
+    position: relative;
+    left: 92%;
+    overflow: hidden;
+    background-color: #FAFAFA;
+}
+
+.div_coluna4_7col_exp_conteudo {
+    float: left;
+    //width:12.57%;
+    //width:20.57%;
+    width: 54.28%;
+    position: relative;
+    left: 92%;
+    overflow: hidden;
+    //background-color:#FAFAFA;
+}
+
+
+.div_coluna5_7col {
+    float: left;
+    width: 15.57%;
+    position: relative;
+    left: 93.5%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna6_7col {
+    float: left;
+    //width:12.57%;
+    width: 8.57%;
+    position: relative;
+    left: 95%;
+    overflow: hidden;
+    //background:#000;
+}
+
+.div_coluna7_7col {
+    float: left;
+    width: 10.57%;
+    position: relative;
+    left: 100%;
+    overflow: hidden;
+    //background:#000;
+}
+
+
+/*
+==============================================================
+Linha com 6 Colunas - Tripulantes - History - Editar - Laranja
+==============================================================
+*/
+
+.div_area_6_6col_cabecalho_edit_history {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    background-color: #FAFAFA;
+}
+
+.div_area_6_6col_cabecalho_exp_edit_history { /* Remover o background cinza total do cabecalho do expandido observations */
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    //background-color: #FAFAFA;
+}
+
+
+.div_area_6_6col_edit_history {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+.div_area_6_6col_exp_edit_history { /* Remove o padding-top e o bottom-border */
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    //padding-top: 10px;
+    //border-top: 1px #EEEEEE solid;
+}
+
+
+
+.div_area_5_6col_cabecalho_edit_history {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+.div_area_5_6col_edit_history {
+    padding-bottom: 10px;
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_6col_edit_history {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_3_6col_edit_history {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+
+
+.div_area_2_6col_edit_history {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_6col_edit_history {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.666%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+/* ********************************* colunas ********************************* */
+.div_coluna1_6col_edit_history {
+    float: left;
+    //width:12.57%;
+    width: 4.57%;
+    position: relative;
+    left: 85.5%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna2_6col_edit_history {
+    float: left;
+    //width:12.57%;
+    width: 5.57%;
+    position: relative;
+    left: 86.5%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_6col_edit_history {
+    float: left;
+    width: 20.57%;
+    position: relative;
+    left: 90%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+.div_coluna3_6col_exp__conteudo_edit_history { /* 3 próximas áreas estao vazias */
+    float: left;
+    //width:82.28%;
+    width: 43.14%;
+    position: relative;
+    left: 90%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+.div_coluna3_6col_exp_edit_history { /* area para cabecalho expandido */
+    float: left;
+    //width:12.57%;
+    //width:20.57%;
+    width: 43.14%;
+    position: relative;
+    left: 90%;
+    overflow: hidden;
+    background-color: #FAFAFA;
+}
+
+
+.div_coluna4_6col_edit_history {
+    float: left;
+    //width:12.57%;
+    width: 20.57%;
+    position: relative;
+    left: 92%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+
+
+
+.div_coluna5_6col_edit_history {
+    float: left;
+    width: 15.57%;
+    position: relative;
+    left: 93.5%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna6_6col_edit_history {
+    float: left;
+    //width:12.57%;
+    width: 15.57%;
+    position: relative;
+    left: 95%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+
+
+
+/*
+==================================
+Botão para mostrar/esconder Azul
+==================================
+*/
+
+a.caixa_btn_mostraresconder:link, a.caixa_btn_mostraresconder:visited {
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    background-color: #0099FF; /* 666666 */
+    line-height: 20px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_mostraresconder:hover, a.caixa_btn_mostraresconder:active {
+    margin-bottom: 1px;
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+/*
+==================================
+Botão para mostrar/esconder Cinza - editar
+==================================
+*/
+
+a.caixa_btn_mostraresconder_editar:link, a.caixa_btn_mostraresconder_editar:visited {
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    background-color: #999999; /* 666666 */
+    line-height: 20px;
+    text-align: center;
+    //margin-top: 25px;
+    border: 1px #EEEEEE solid;
+    box-sizing: border-box;
+}
+
+a.caixa_btn_mostraresconder_editar:hover, a.caixa_btn_mostraresconder_editar:active {
+    margin-bottom: 1px;
+    //color: #0066CC;
+    background-color: #CCCCCC;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #999999 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+
+/*
+
+*/
+
+/*
+=============================================
+linha com 5 Colunas (Histórico de embarques)
+=============================================
+*/
+
+.div_area_5_5col_cabecalho {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    background-color: #FAFAFA;
+}
+
+.div_area_5_5col {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+
+.div_area_4_5col {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 20%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_3_5col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 20%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_5col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 20%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_5col {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 20%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+
+
+.div_coluna1_5col {
+    float: left;
+    width: 17.589%;
+    position: relative;
+    left: 82%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+
+
+.div_coluna2_5col {
+    float: left;
+    width: 17.589%;
+    position: relative;
+    left: 83%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_5col {
+    float: left;
+    width: 10.589%;
+    position: relative;
+    left: 84%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+
+.div_coluna4_5col {
+    float: left;
+    width: 10.589%;
+    position: relative;
+    left: 85%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+.div_coluna5_5col {
+    float: left;
+    width: 31.589%;
+    position: relative;
+    left: 86%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+/*
+===========================================
+Campos tripulante editar
+===========================================
+*/
+
+.moldura_tripulantes_campo { /* moldura caixa tripulantes campo */
+    background-color: #FFFFFF;
+    width: 100%;
+    border: 1px solid #FF6600;
+    height: 30px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.inp_tripulantes_campo {
+    font: 14px arial, sans-serif;
+    border: 1px #333333 solid;
+    height: 28px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-indent: 5px;
+    border: none;
+    //margin: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+.moldura_tripulantes_campo_nome_topo { /* moldura caixa tripulantes campo */
+    background-color: #FFFFFF;
+    width: 300px;
+    border: 1px solid #FF6600;
+    height: 40px;
+    box-sizing: border-box;
+    display: block;
+    //font: 22px arial, sans-serif;
+    color: #666666;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+}
+
+.inp_tripulantes_campo_nome_topo {
+    font: 14px arial, sans-serif;
+    border: 1px #333333 solid;
+    height: 38px;
+    width: 300px;
+    background-color: #FFFFFF;
+    text-indent: 5px;
+    border: none;
+    //margin: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+
+
+.textarea_tripulantes_campo {
+    font: 14px arial, sans-serif;
+    border: 1px #333333 solid;
+    height: 60px;
+    width: 100%;
+    background-color: #FFFFFF;
+    //text-indent: 5px;
+    padding: 5px;
+    border: 1px solid #FF6600;
+    //margin: 0;
+    box-sizing: border-box;
+    float: left;
+    overflow-y: auto;
+}
+
+
+
+/*
+===========================================================
+Linha 6 colunas Tripulantes - Editar - Documentos - Laranja
+===========================================================
+*/
+
+.div_area_6_6col_cabecalho_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    background-color: #FAFAFA;
+}
+
+.div_area_6_6col_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+
+.div_area_5_6col_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_3_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+.div_coluna1_6col_editar_docs {
+    float: left;
+    //width:12%;
+    width: 5%;
+    position: relative;
+    //left:68.67%;
+    //left:84%;
+    left: 85%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+
+.div_coluna2_6col_editar_docs {
+    float: left;
+    //width:16%;
+    width: 20%;
+    position: relative;
+    //left:84.5%;
+    left: 88%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    //width:16%;
+    width: 20%;
+    position: relative;
+    //left:85%;
+    left: 90%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+
+.div_coluna4_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.3%;
+    left: 92%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+.div_coluna5_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.9%;
+    left: 94%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna6_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:86.4%;
+    //left:86.9%;
+    left: 97%;
+    overflow: hidden;
+    //background:#000;
+}
+
+
+
+/*
+=====================================================================
+Linha 6 colunas Tripulantes - Editar - History of Shipments - Laranja
+=====================================================================
+*/
+
+.div_area_6_6col_cabecalho_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border: 1px #FF2200 solid;
+    background-color: #FAFAFA;
+}
+
+.div_area_6_6col_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px #EEEEEE solid;
+}
+
+
+.div_area_5_6col_editar_docs {
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_4_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FF2200;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_3_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#0099FF;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_2_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#000000;
+    //border: 1px #FF2200 solid;
+}
+
+.div_area_1_6col_editar_docs {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 16.6%;
+    //background:#FFFF22;
+    //border: 1px #FF2200 solid;
+}
+
+
+
+.div_coluna1_6col_editar_docs {
+    float: left;
+    //width:12%;
+    width: 5%;
+    position: relative;
+    //left:68.67%;
+    //left:84%;
+    left: 85%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+
+.div_coluna2_6col_editar_docs {
+    float: left;
+    //width:16%;
+    width: 20%;
+    position: relative;
+    //left:84.5%;
+    left: 88%;
+    overflow: hidden;
+    //background:#000000;
+}
+
+
+.div_coluna3_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    //width:16%;
+    width: 20%;
+    position: relative;
+    //left:85%;
+    left: 90%;
+    overflow: hidden;
+    //background:#FFaa00;
+}
+
+
+.div_coluna4_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.3%;
+    left: 92%;
+    overflow: hidden;
+    //background:#FFee00;
+}
+
+.div_coluna5_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:85.9%;
+    left: 94%;
+    overflow: hidden;
+    //background:#FF2200;
+}
+
+.div_coluna6_6col_editar_docs {
+    float: left;
+    //width:29.33%;
+    width: 16%;
+    position: relative;
+    //left:86.4%;
+    //left:86.9%;
+    left: 97%;
+    overflow: hidden;
+    //background:#000;
+}
+
+
+
+/*
+========================================
+Botão Tripulantes - Editar - Novo campo
+========================================
+*/
+
+
+.area_botao_novo_campo { /* botão novo */
+    width: 100%;
+    float: left;
+}
+
+a.caixa_btn_tripulante_novo_campo:link, a.caixa_btn_tripulante_novo_campo:visited { /* add row */
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #FF6600;
+    //background-image: url("../imgs/tripulantes_criar_nova_linha.png");
+    //background-repeat: no-repeat;
+    //background-position: 45%;
+    line-height: 30px;
+    //text-indent: 55px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+a.caixa_btn_tripulante_novo_campo:hover, a.caixa_btn_tripulante_novo_campo:active {
+    //color: #0066CC;
+    //background-color: #CCCCCC;
+    background-color: #FF9966;
+    display: block;
+    //box-sizing: border-box;
+    border: 1px #FF6600 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+    /*
+	Laranja forte #FF6600
+	Laranja fraco #FF9966
+	*/
+}
+
+
+/*
+========================================
+Botão Login - Entrar - Azul
+========================================
+*/
+
+.area_botao_login { /* botão imprimir*/
+    width: 140px;
+    float: left;
+}
+
+a.caixa_btn_login:link, a.caixa_btn_login:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 250px;
+    height: 40px;
+    border: none;
+    background-color: #0099FF;
+    background-image: url("../imgs/menu_login.png");
+    background-repeat: no-repeat;
+    background-position: 60px;
+    line-height: 40px;
+    text-indent: 105px;
+    margin-top: 10px;
+}
+
+a.caixa_btn_login:hover, a.caixa_btn_login:active {
+    //color: #0066CC;
+    background-color: #99CCFF;
+    display: block;
+    //box-sizing: border-box;
+    border: 1px #0099FF solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+/*
+========================================
+Botão Tripulantes - Editar - Cancelar cinza
+========================================
+*/
+
+.area_botao_cancelar_cinza { /* botão imprimir*/
+    width: 140px;
+    float: left;
+}
+
+a.caixa_btn_tripulantes_cancelar_cinza:link, a.caixa_btn_tripulantes_cancelar_cinza:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #999999; /* 666666 */
+    background-image: url("../imgs/cancelar_cinza.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 45px;
+    margin-top: 25px;
+}
+
+a.caixa_btn_tripulantes_cancelar_cinza:hover, a.caixa_btn_tripulantes_cancelar_cinza:active {
+    //color: #0066CC;
+    background-color: #CCCCCC;
+    display: block;
+    //box-sizing: border-box;
+    border: 1px #999999 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+/*
+========================================
+Botão Tripulantes - Editar - Gravar laranja
+========================================
+*/
+
+.area_botao_gravar_laranja { /* botão imprimir*/
+    width: 140px;
+    float: left;
+}
+
+a.caixa_btn_tripulantes_gravar_laranja:link, a.caixa_btn_tripulantes_gravar_laranja:visited {
+    display: block;
+    text-decoration: none;
+    font: 16px arial, sans-serif;
+    color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #FF6600; /* 666666 */
+    background-image: url("../imgs/gravar_laranja.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    line-height: 40px;
+    text-indent: 50px;
+    margin-top: 25px;
+}
+
+a.caixa_btn_tripulantes_gravar_laranja:hover, a.caixa_btn_tripulantes_gravar_laranja:active {
+    //color: #0066CC;
+    background-color: #FF9966;
+    display: block;
+    //box-sizing: border-box;
+    border: 1px #FF6600 solid;
+    box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+/*
+===========================================
+Div popup imagem
+===========================================
+*/
+
+#cover_imagem { /* capa sobre tudo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333333;
+    //z-index:5;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+#popup_imagem { /* Conteudo do div 'popup' */
+    border: 1px #FF6600 solid;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 150px;
+    z-index: 10;
+    display: none;
+    background-color: #FFF;
+    padding: 30px;
+    box-shadow: 0px 3px 3px #666666;
+    overflow: hidden;
+}
+
+    #popup_imagem:target {
+        display: block;
+    }
+
+        #popup_imagem:target + #cover_imagem {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* opacidade */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+            filter: alpha(opacity=50); /* IE 5-7 */
+            -moz-opacity: 0.5; /* Netscape */
+            -khtml-opacity: 0.5; /* Safari 1.x */
+            opacity: 0.5; /* Good browsers */
+        }
+
+.popup_titulo_cabecalho {
+    font: 20px arial, sans-serif;
+    color: #FF6600;
+    padding-bottom: 20px;
+}
+
+.popup_input_upload {
+    width: 100%;
+    font: 14px arial, sans-serif;
+    color: #999999;
+}
+
+.popup_botoes {
+    width: 140px;
+    float: left;
+}

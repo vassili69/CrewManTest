@@ -14,12 +14,17 @@ namespace CrewManTest.Controllers
     {
         // GET: /<controller>/
         public IActionResult Alerts()
-            
+
         {
             var model = new Tripulante();
             model.Nome = "coco";
             model.Num = 45138;
             return View(model);
+        }
+
+        public IActionResult CrewMembers()
+        {
+            return View();
         }
     }
 }
