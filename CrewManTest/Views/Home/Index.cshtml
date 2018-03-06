@@ -4,35 +4,37 @@
 
 <link rel="stylesheet" href="~/css/crewman.css" />
 <body>
-  
-        <div class="div_geral_direita_90">
+
+    <div class="div_geral_direita_90">
 
 
-            <div class="div_direita_topo_header">Login <img src="images/menu_login.png"></div>
+        <div class="div_direita_topo_header">Login <img src="images/menu_login.png"></div>
 
-            <!-- form login -->
-            <form action="#" class="form_login">
+        <!-- form login -->
+        <form action="#" method="post" class="form_login">
 
-                @using (Html.BeginForm())
-            {
-            <div class="moldura_login">
-                <input type="text" class="inp_login" placeholder="Utilizador" />
-            </div>
-
-            <div class="moldura_login">
-                <input type="password" class="inp_login" placeholder="Password" />
-            </div>
-
-            <button name="nome" type="submit" class="btn_login">Entrar</button>
-            <div class="msg_erro" >
-                <label id="erro">erro de login</label>    
-            </div>
-
-            <p> </p>
-            }
-                <!--https://www.codeproject.com/Articles/482546/Creating-a-custom-user-login-form-with-NET-Csharp-->
-            </form>
-
+            @using (Html.BeginForm())
+    {
+        <div class="moldura_login">
+            <input type="text" name="username" id="username" class="inp_login" placeholder="Utilizador" />
         </div>
+
+        <div class="moldura_login">
+            <input type="password" name="password" id="password" class="inp_login" placeholder="Password" />
+        </div>
+
+        
+        <button name="loginbtn" id="loginbtn" type="submit" class="btn_login">Entrar</button>
+        <div class="msg_erro">
+            <label id="erro" hidden="true">erro de login</label>
+        </div>
+
+        <p> </p>
+}
+            <!--https://www.codeproject.com/Articles/482546/Creating-a-custom-user-login-form-with-NET-Csharp-->
+        </form>
+
+    </div>
    
+    
 </body>
