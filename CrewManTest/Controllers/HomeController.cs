@@ -48,17 +48,26 @@ namespace CrewManTest.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-       [ HttpPost]
- 
-public ActionResult Index(string username)
+
+        [HttpPost]
+        public ActionResult Index(string username, string password)
 
         {
-           // return View("Logout");
-            
-            
-            return Content($" Received {username}");
 
+            if (Tripulante.IsValid(username, password))
+            {
+                return View("CrewMembers");
+            }
+            else
+            {
+                return View("Contact");
+            }
         }
+           
+            
+            
+
+        
 
     }
 }

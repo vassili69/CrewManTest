@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace CrewManTest
+namespace CrewManTest.Models
 {
    
     public class SQLHelper
@@ -84,5 +84,8 @@ namespace CrewManTest
                 command.Parameters.Add(p);
             }
         }
+
+
+
     }
 }
