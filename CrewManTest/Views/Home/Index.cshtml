@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model CrewManTest.Models.Tripulante
 <link rel="stylesheet" href="~/css/crewman.css" />
 <body>
 
@@ -14,19 +14,31 @@
         <form action="#" method="post" class="form_login">
 
             @using (Html.BeginForm())
+
     {
-        <div class="moldura_login">
-            <input type="text" name="username" id="username" class="inp_login" placeholder="Utilizador" />
-        </div>
+        @Html.AntiForgeryToken()
+
+
+            <div class="moldura_login">
+                <!--  <input type="text" name="username" id="username" class="inp_login" placeholder="Utilizador" />-->
+                @Html.TextBoxFor(model => model.UserName, new { @class = "inp_login", placeholder = "Utilizador", @type = "text" })
+                
+
+            </div>
 
         <div class="moldura_login">
-            <input type="password" name="password" id="password" class="inp_login" placeholder="Password" />
+            @Html.TextBoxFor(model => model.Password, new { @class = "inp_login", placeholder = "Password", @type = "password" })
+           
+            <!--<input type="password" name="password" id="password" class="inp_login" placeholder="Password" />-->
         </div>
 
-        
+
         <button name="loginbtn" id="loginbtn" type="submit" class="btn_login">Entrar</button>
         <div class="msg_erro">
             <label id="erro" hidden="true">erro de login</label>
+            @Html.ValidationMessageFor(model => model.UserName)<br />
+            @Html.ValidationMessageFor(model => model.Password)<br />
+            @Html.ValidationMessage("LogOnError")
         </div>
 
         <p> </p>

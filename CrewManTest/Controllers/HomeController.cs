@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CrewManTest.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace CrewManTest.Controllers
 {
@@ -31,6 +32,13 @@ namespace CrewManTest.Controllers
             
             return View();
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+            
+        }
         public IActionResult Alerts()
 
         {
@@ -41,7 +49,12 @@ namespace CrewManTest.Controllers
         }
         public IActionResult CrewMembers()
         {
-            return View();
+            if (HttpContext.Session.GetString("User") != null)
+            {
+                return View();
+            }
+            else return RedirectToAction("Index");
+
         }
 
         public IActionResult Error()
@@ -50,18 +63,29 @@ namespace CrewManTest.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string username, string password)
+        [ValidateAntiForgeryToken]
+
+        public ActionResult Index(Models.Tripulante user)
 
         {
-
-            if (Tripulante.IsValid(username, password))
+            if (ModelState.IsValid)
+            { 
+            
+            if (Tripulante.IsValid(user.UserName,user.Password))
             {
+                HttpContext.Session.SetString("User","active");
                 return View("CrewMembers");
             }
             else
             {
-                return View("Contact");
+                    ModelState.AddModelError("LogOnError", "O Utilizador ou Palavra chave esta errada");
+                    //return RedirectToAction("Index");
+
+                }
+                
             }
+         //   ModelState.AddModelError("LogOnError", "The user name or password provided is incorrect.");
+           return View(user);
         }
            
             

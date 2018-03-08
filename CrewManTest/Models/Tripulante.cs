@@ -16,32 +16,35 @@ namespace CrewManTest.Models
         public decimal Price { get; set; }
         public string Category { set; get; }
 
-        [Required]
-        [Display(Name = "User name")]
+         
+        [Required (ErrorMessage = "* Introduza o utilizador")]
+        [Display(Name = "Username")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "* Introduza a password")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
+
         public string Password { get; set; }
 
-        public static bool IsValid(string _username, string _password)
+        public static bool IsValid(string p1, string p2)
         {
             using (var cn = new SqlConnection(Models.SQLHelper.ConnectionString))
             {
                 string _sql = @"SELECT [Username] FROM [dbo].UserLogin " +
                        @"WHERE [Username] = @u AND [Password] = @p";
-                
+                string pass;
+                pass = Helpers.SHA1.Encode(p2.ToString());
                 var parameters = new[]
                   {
-                        new SqlParameter("@u",_username),
-                        new SqlParameter("@p", Helpers.SHA1.Encode(_password))
+                        new SqlParameter("@u",p1.ToString()),
+                        new SqlParameter("@p",pass)
                         
                     };
 
-                int result = Models.SQLHelper.ExecuteNonQuery(cn, _sql, parameters);
+                var reader = Models.SQLHelper.ExecuteReader(cn, System.Data.CommandType.Text, _sql, parameters);
                 
-                if (result>0)
+                if (reader.HasRows)
                 {
                     return true;
                 }
@@ -52,8 +55,7 @@ namespace CrewManTest.Models
             }
         }
 
-
-
+        
     }
 
 

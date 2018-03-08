@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Session;
 
 namespace CrewManTest
 {
@@ -22,11 +24,13 @@ namespace CrewManTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSession();
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
