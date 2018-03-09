@@ -42,10 +42,9 @@ namespace CrewManTest.Controllers
         public IActionResult Alerts()
 
         {
-            var model = new Tripulante();
-            model.Nome = "coco";
-            model.Num = 45138;
-            return View(model);
+            
+            return View();
+
         }
         public IActionResult CrewMembers()
         {
@@ -54,24 +53,38 @@ namespace CrewManTest.Controllers
                 return View();
             }
             else return RedirectToAction("Index");
-
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CrewMembers(Models.crew crew)
+            {
+                    crew.GetStoreProc(crew.Nome);
+                    return View();
+               
+            
+           
+            }
+
+        
 
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public ActionResult Index(Models.Tripulante user)
+        public ActionResult Index(Models.login user)
 
         {
             if (ModelState.IsValid)
             { 
             
-            if (Tripulante.IsValid(user.UserName,user.Password))
+            if (login.IsValid(user.UserName,user.Password))
             {
                 HttpContext.Session.SetString("User","active");
                 return View("CrewMembers");

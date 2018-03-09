@@ -8,15 +8,9 @@ using System.Web;
 
 namespace CrewManTest.Models
 {
-    public class Tripulante
+    public class login
     {
-        public int Num { get; set; }
-        public string Nome { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public string Category { set; get; }
-
-         
+             
         [Required (ErrorMessage = "* Introduza o utilizador")]
         [Display(Name = "Username")]
         public string UserName { get; set; }
@@ -56,6 +50,10 @@ namespace CrewManTest.Models
         }
 
         
+
+       
+
+
     }
 
 

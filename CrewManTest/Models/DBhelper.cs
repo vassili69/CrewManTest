@@ -84,7 +84,65 @@ namespace CrewManTest.Models
                 command.Parameters.Add(p);
             }
         }
+        public static DataTable ExecuteStorePrc(SqlConnection conn, string Storename, SqlParameter[] cmdParms)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter())
+                {
+                    da.SelectCommand = new SqlCommand(Storename, conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "result_name");
+
+                     dt = ds.Tables["result_name"];
+
+                    /*foreach (DataRow row in dt.Rows)
+                    {
+                        //manipulate your data
+                    }*/
+                    return dt;
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Error: " + ex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+            }
+            
+            return dt;
+            
+            /*
+
+            conn.Open();
+                SqlCommand cmd = new SqlCommand(Storename, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (SqlParameter p in cmdParms)
+                {
+                    if ((p.Direction == ParameterDirection.InputOutput) && (p.Value == null))
+                    {
+                        p.Value = DBNull.Value;
+                    }
+                    cmd.Parameters.Add(p);
+                }
+                var adapt = new SqlDataAdapter();
+            adapt.SelectCommand = cmd;
+            DataTable dataset = new DataTable();
+            adapt.Fill(dataset);
+            conn.Close();
+            return dataset;*/
+
+
+
+
+
+            
+        }
 
 
     }

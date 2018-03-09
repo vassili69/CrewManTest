@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CrewManTest.Models;
-
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,15 +16,30 @@ namespace CrewManTest.Controllers
         public IActionResult Alerts()
 
         {
-            var model = new Tripulante();
-            model.Nome = "coco";
-            model.Num = 45138;
-            return View(model);
-        }
-
-        public IActionResult CrewMembers()
-        {
+          
             return View();
         }
+
+       
+        public IActionResult CrewMembers()
+        {
+            if (HttpContext.Session.GetString("User") != null)
+            {
+                return View();
+            }
+            else return RedirectToAction("Index");
+        }
+
+
+
+        public IActionResult CrewMembers(Models.crew crew)
+        {
+            crew.GetStoreProc(crew.Nome);
+            return View();
+            }
+          
+
+        
+
     }
 }
