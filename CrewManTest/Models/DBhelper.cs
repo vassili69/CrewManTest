@@ -84,26 +84,26 @@ namespace CrewManTest.Models
                 command.Parameters.Add(p);
             }
         }
-        public static DataTable ExecuteStorePrc(SqlConnection conn, string Storename, SqlParameter[] cmdParms)
+        public static DataSet ExecuteStorePrc(SqlConnection conn, string Storename, SqlParameter[] cmdParms)
         {
-            DataTable dt = new DataTable();
-            try
-            {
-                using (SqlDataAdapter da = new SqlDataAdapter())
-                {
-                    da.SelectCommand = new SqlCommand(Storename, conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            /*  DataTable dt = new DataTable();
+             try
+             {
+                 using (SqlDataAdapter da = new SqlDataAdapter())
+                 {
+                     da.SelectCommand = new SqlCommand(Storename, conn);
+                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-                    DataSet ds = new DataSet();
-                    da.Fill(ds, "result_name");
+                     DataSet ds = new DataSet();
+                     da.Fill(ds, "result_name");
 
-                     dt = ds.Tables["result_name"];
+                      dt = ds.Tables["result_name"];
 
-                    /*foreach (DataRow row in dt.Rows)
-                    {
-                        //manipulate your data
-                    }*/
-                    return dt;
+                     /*foreach (DataRow row in dt.Rows)
+                     {
+                         //manipulate your data
+                     }
+            return dt;
                 }
             }
             catch (SqlException ex)
@@ -115,11 +115,12 @@ namespace CrewManTest.Models
                 Console.WriteLine("Error: " + e.Message);
             }
             
-            return dt;
-            
-            /*
+            return dt; */
 
-            conn.Open();
+
+           
+
+            
                 SqlCommand cmd = new SqlCommand(Storename, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 foreach (SqlParameter p in cmdParms)
@@ -130,13 +131,16 @@ namespace CrewManTest.Models
                     }
                     cmd.Parameters.Add(p);
                 }
-                var adapt = new SqlDataAdapter();
-            adapt.SelectCommand = cmd;
-            DataTable dataset = new DataTable();
-            adapt.Fill(dataset);
-            conn.Close();
-            return dataset;*/
+            conn.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
 
+            DataSet ds = new DataSet();
+            adapt.Fill(ds);
+           
+            
+
+            conn.Close();
+            return ds;
 
 
 

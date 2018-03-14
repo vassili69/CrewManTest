@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="~/css/crewman.css" />
 <!-- divisão horizontal direita-centro com 75% de 100% do geral -->
 @model CrewManTest.Models.crew
+
 <body>
 
     <br />
@@ -26,72 +27,84 @@
                     @using (Html.BeginForm("TripulanteController", "CrewMembers"))
 
                     {
-                @Html.AntiForgeryToken()
-                @Html.TextBoxFor(model => model.Nome, new { @class = "inp_tripulantes_pesquisa", placeholder = "Pesquisar...", @type = "text" })
-                <!--<input type="text" class="inp_tripulantes_pesquisa" placeholder="Pesquisar..." />-->
-                <button name="pesquisar" id="pesquisar" type="submit" class="btn_tripulantes_pesquisa"></button>
-
-                <!--     <input type="button" name="pesquisar" id="pesquisar" class="btn_tripulantes_pesquisa" title="Pesquisar" />-->
-}
+                        @Html.AntiForgeryToken()
+                        @Html.TextBoxFor(model => model.Nome, new { @class = "inp_tripulantes_pesquisa", placeholder = "Pesquisar...", @type = "text" })
+                        <!--<input type="text" class="inp_tripulantes_pesquisa" placeholder="Pesquisar..." />-->
+                        <button name="pesquisar" id="pesquisar" type="submit" class="btn_tripulantes_pesquisa"></button>
+                       <!--     <input type="button" name="pesquisar" id="pesquisar" class="btn_tripulantes_pesquisa" title="Pesquisar" />-->
+                    }
 
                 </div>
             </div>
         </div>
     </form>
+    @using (Html.BeginForm("TripulanteController", "CrewMembers"))
 
+    {
 
 
         <!-- Alfabeto -->
         <div class="alfabetofont">
             <span class="alfabetoborder">
-                <a href="#" class="alfabeto_link">A </a>
-                <a href="#" class="alfabeto_link">B </a>
-                <a href="#" class="alfabeto_link">C </a>
-                <a href="#" class="alfabeto_link">D </a>
-                <a href="#" class="alfabeto_link">E </a>
-                <a href="#" class="alfabeto_link">F </a>
-                <a href="#" class="alfabeto_link">E </a>
-                <a href="#" class="alfabeto_link">F </a>
-                <a href="#" class="alfabeto_link">G </a>
-                <a href="#" class="alfabeto_link">H </a>
-                <a href="#" class="alfabeto_link">I </a>
-                <a href="#" class="alfabeto_link">J </a>
-                <a href="#" class="alfabeto_link">K </a>
-                <a href="#" class="alfabeto_link">L </a>
-                <a href="#" class="alfabeto_link">M </a>
-                <a href="#" class="alfabeto_link">O </a>
-                <a href="#" class="alfabeto_link">P </a>
-                <a href="#" class="alfabeto_link">Q </a>
-                <a href="#" class="alfabeto_link">R </a>
-                <a href="#" class="alfabeto_link">S </a>
-                <a href="#" class="alfabeto_link">T </a>
-                <a href="#" class="alfabeto_link">U </a>
-                <a href="#" class="alfabeto_link">V </a>
-                <a href="#" class="alfabeto_link">W </a>
-                <a href="#" class="alfabeto_link">X </a>
-                <a href="#" class="alfabeto_link">Y </a>
-                <a href="#" class="alfabeto_link">Z </a>
+
+                @Html.ActionLink("A", "CrewMembers", "Home", new { @StartsWith = "A" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("B", "CrewMembers", "Home", new { @StartsWith = "B" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("C", "CrewMembers", "Home", new { @StartsWith = "C" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("D", "CrewMembers", "Home", new { @StartsWith = "D" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("E", "CrewMembers", "Home", new { @StartsWith = "E" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("F", "CrewMembers", "Home", new { @StartsWith = "F" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("G", "CrewMembers", "Home", new { @StartsWith = "G" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("H", "CrewMembers", "Home", new { @StartsWith = "H" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("I", "CrewMembers", "Home", new { @StartsWith = "I" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("J", "CrewMembers", "Home", new { @StartsWith = "J" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("K", "CrewMembers", "Home", new { @StartsWith = "K" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("L", "CrewMembers", "Home", new { @StartsWith = "L" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("M", "CrewMembers", "Home", new { @StartsWith = "M" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("N", "CrewMembers", "Home", new { @StartsWith = "N" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("O", "CrewMembers", "Home", new { @StartsWith = "O" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("P", "CrewMembers", "Home", new { @StartsWith = "P" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("Q", "CrewMembers", "Home", new { @StartsWith = "Q" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("R", "CrewMembers", "Home", new { @StartsWith = "R" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("S", "CrewMembers", "Home", new { @StartsWith = "S" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("T", "CrewMembers", "Home", new { @StartsWith = "T" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("U", "CrewMembers", "Home", new { @StartsWith = "U" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("V", "CrewMembers", "Home", new { @StartsWith = "V" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("W", "CrewMembers", "Home", new { @StartsWith = "W" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("X", "CrewMembers", "Home", new { @StartsWith = "X" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("Y", "CrewMembers", "Home", new { @StartsWith = "Y" }, new { @class = "alfabeto_link" })
+                @Html.ActionLink("Z", "CrewMembers", "Home", new { @StartsWith = "Z" }, new { @class = "alfabeto_link" })
             </span>
             <span class="span_alfabeto"></span>
         </div>
+    }
+    <!-- listagem -->
+    <ul class="listagem_nomes">
+        <li>
+            @if (ViewData["TabelaTrip"] != null)
 
-        <!-- listagem -->
-        <ul class="listagem_nomes">
-            <li>
-                @Html.ActionLink("A", "CrewMembers", "TripulanteController", new { id = "123" }, null)
-                <!--<a href="#">Alberto Madail Silva Belo</a>-->
-            </li>
-        </ul>
+            {
+                foreach (System.Data.DataRow dr in (ViewData["TabelaTrip"] as System.Data.DataTable).Rows)
+                {
+                   @dr[0]     @Html.ActionLink(@dr[1].ToString(), null, null, null, null, null, new { NumEmp = dr[0].ToString() }, null)<br />
 
-
-
-        <!-- altura 40px no fim do conteúdo-->
-        <div class="altura_40_direita_fim">&nbsp;</div>
-
-
+                }
+            }
 
 
-        </div>
+
+            <!--<a href="#">Alberto Madail Silva Belo</a>-->
+        </li>
+    </ul>
+
+
+
+    <!-- altura 40px no fim do conteúdo-->
+    <div class="altura_40_direita_fim">&nbsp;</div>
+
+
+
+
+
 
 
 
