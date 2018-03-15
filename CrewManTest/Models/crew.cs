@@ -46,7 +46,7 @@ namespace CrewManTest.Models
 
                 var parameters = new[]
                   {
-                        new SqlParameter("@letra",p1)
+                        new SqlParameter("@nome",p1)
 
                   };
                 var ds = Models.SQLHelper.ExecuteStorePrc(cn, StoreName, parameters);

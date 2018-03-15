@@ -14,7 +14,7 @@ namespace CrewManTest.Controllers
     public class HomeController : Controller
     {
         //***********************************************//
-        //******************LOGOUT***********************//
+        //******************LOGOUT E ALERTS**************//
         //***********************************************//
 
         public IActionResult Logout()
@@ -23,7 +23,12 @@ namespace CrewManTest.Controllers
             return RedirectToAction("Index");
 
         }
+        public IActionResult Alerts()
 
+        {
+
+            return View();
+        }
         //***********************************************//
         //******************INDEX************************//
         //***********************************************//
@@ -125,8 +130,6 @@ namespace CrewManTest.Controllers
             }
             else return RedirectToAction("Index");
         }*/
-        [HttpGet]
-        [ValidateAntiForgeryToken]
         public IActionResult CrewChange()
          {
          return View();

@@ -2,15 +2,623 @@
 @{
     ViewData["Title"] = "CrewChange";
 }
-}
+<br />
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border-color: #1a66ff;
+        white-space: nowrap;
+    }
+    tr {
+        width: 100%
+    }
+    th {
+        font: 16px arial, sans-serif;
+        color: #FF6600;
+        clear: left;
+        width: 100%;
+        overflow: hidden;
+        background: #FF2200;
+        padding-top: 3px;
+        padding: 3px;
+        padding-bottom: 3px;
+        border: 1px #EEEEEE solid;
+        background-color: #FAFAFA;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+    td {
+        font: 11px arial, sans-serif;
+        position: center;
+        word-wrap: break-word; border: 1px #EEEEEE solid;
+        padding: 3px;
+
+        
+    }
+
+</style>
+
+@model CrewManTest.Models.crew
 <link rel="stylesheet" href="~/css/crewman.css" />
 
-<div class="div_direita_topo_header">Crew members <img src="~/images/menu_tripulantes.png"></div>
-<table style="width:100%">
-    <tr class="class=" div_titulo_barra_area_3"">
-        <th>Nome</th>
-        <th>Nome</th>
-        <th>Nome</th>
+<div class="div_direita_topo_header">Crew Change <img src="~/images/menu_tripulantes.png"></div>
+<table style="border-color:#1a66ff" colspan=20 cellspacing="0">
+
+    <tr>
+        <th colspan="10">Master</th>
+       <td colspan="5" align="right" style=" background-color: #FAFAFA;" >@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50,size=30 })</td>
+        <td colspan="5" align="center" style="background-color: #FAFAFA;"><input style="color:#ff6a00; " type="submit" value="Add Crew" /></td>
+    </tr>
+    <tr>
+        <td colspan="4" align="left">
+            VOLODYMYR MIROSHNICHENKO
+        </td>
+        <td colspan="4"  align="center">
+           @Html.Label("OREGON, NEW ORLANDS")
+        </td>
+        <td colspan="1" align="center">
+            31-01-2017
+        </td>
+        <td colspan="4" align="center">
+            @Html.Label("OREGON, NEW ORLANDS")
+        </td>
+        <td colspan="2" align="center">
+            31-01-2017
+        </td>
+        <td colspan="1" align="center">
+            6.700,00
+        </td>
+        <td colspan="2" align="center">
+           31-07-2017
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Chief Mate</th>
+        <td colspan="5" align="right" style="background-color: #FAFAFA;" >@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50, size = 30 })</td>
+        <td colspan="5" align="center" style="background-color: #FAFAFA;"><input type="submit" style="color:#ff6a00; "  value="Add Crew" /></td>
+    </tr>
+    <tr>
+        <td colspan="4" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="4" align="center">
+            @Html.Label("OREGON, NEW ORLANDS")
+        </td>
+        <td colspan="1" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="4" align="center">
+            @Html.Label("OREGON, NEW ORLANDS")
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="1" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">2nd Mate</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">3rd Mate</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Chief eng</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">2nd eng</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">3rd eng</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Electr. Eng.</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Bosun</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr style=" background-color: #e6ffe6;">
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr style="background-color:#ff9797">
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Able Seaman</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Other Seman</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Fitter</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Motorman</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON PORT
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Cook</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Steward</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
+    </tr>
+    <tr>
+        <th colspan="10">Cadets</th>
+        <th colspan="4">@Html.TextBox("Nome", null, new { placeholder = "Search" })</th>
+        <th colspan="4"><input type="submit" value="Add Crew" /></th>
+
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+            VOLODYMYR YUCHENKO
+        </td>
+        <td colspan="3" align="center">
+            SIGN ON
+        </td>
+        <td colspan="2" align="center">
+            SIGN ON DATE
+        </td>
+        <td colspan="3" align="center">
+            SIGN OFF
+        </td>
+        <td colspan="2" align="center">
+            SIGN OFF DATE
+        </td>
+        <td colspan="2" align="center">
+            WAGE
+        </td>
+        <td colspan="2" align="center">
+            COE VALIDITY
+        </td>
+
     </tr>
 
 </table>
