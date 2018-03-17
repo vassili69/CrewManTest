@@ -3,7 +3,7 @@
     ViewData["Title"] = "CrewChange";
 }
 <br />
-
+@model CrewManTest.Models.CrewChangeModel
 <style>
     table {
         font-family: arial, sans-serif;
@@ -12,9 +12,11 @@
         border-color: #1a66ff;
         white-space: nowrap;
     }
+
     tr {
         width: 100%
     }
+
     th {
         font: 16px arial, sans-serif;
         color: #FF6600;
@@ -30,15 +32,14 @@
         margin-bottom: 3px;
         margin-top: 3px;
     }
+
     td {
         font: 11px arial, sans-serif;
         position: center;
-        word-wrap: break-word; border: 1px #EEEEEE solid;
+        word-wrap: break-word;
+        border: 1px #EEEEEE solid;
         padding: 3px;
-
-        
     }
-
 </style>
 
 @model CrewManTest.Models.crew
@@ -49,15 +50,15 @@
 
     <tr>
         <th colspan="10">Master</th>
-       <td colspan="5" align="right" style=" background-color: #FAFAFA;" >@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50,size=30 })</td>
+        <td colspan="5" align="right" style=" background-color: #FAFAFA;">@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50, size = 30 })</td>
         <td colspan="5" align="center" style="background-color: #FAFAFA;"><input style="color:#ff6a00; " type="submit" value="Add Crew" /></td>
     </tr>
     <tr>
         <td colspan="4" align="left">
             VOLODYMYR MIROSHNICHENKO
         </td>
-        <td colspan="4"  align="center">
-           @Html.Label("OREGON, NEW ORLANDS")
+        <td colspan="4" align="center">
+            @Html.Label("OREGON, NEW ORLANDS")
         </td>
         <td colspan="1" align="center">
             31-01-2017
@@ -72,14 +73,14 @@
             6.700,00
         </td>
         <td colspan="2" align="center">
-           31-07-2017
+            31-07-2017
         </td>
 
     </tr>
     <tr>
         <th colspan="10">Chief Mate</th>
-        <td colspan="5" align="right" style="background-color: #FAFAFA;" >@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50, size = 30 })</td>
-        <td colspan="5" align="center" style="background-color: #FAFAFA;"><input type="submit" style="color:#ff6a00; "  value="Add Crew" /></td>
+        <td colspan="5" align="right" style="background-color: #FAFAFA;">@Html.TextBox("Nome", null, new { placeholder = "Search", maxlength = 50, size = 30 })</td>
+        <td colspan="5" align="center" style="background-color: #FAFAFA;"><input type="submit" style="color:#ff6a00; " value="Add Crew" /></td>
     </tr>
     <tr>
         <td colspan="4" align="left">

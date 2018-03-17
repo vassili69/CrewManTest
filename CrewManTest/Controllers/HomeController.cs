@@ -77,7 +77,7 @@ namespace CrewManTest.Controllers
                 if (StartsWith != null)
                 {
                     DataTable dt = new DataTable();
-                    dt = crew.GetStoreProcLetter(StartsWith);
+                    dt = CrewListModel.GetStoreProcLetter(StartsWith);
                     ViewData["TabelaTrip"] = dt;
                     StartsWith = null;
                     return View();
@@ -90,12 +90,12 @@ namespace CrewManTest.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CrewMembers(Models.crew crew)
+        public ActionResult CrewMembers(Models.CrewListModel crew)
             {
             if (crew.Nome != null)
             {
                 DataTable dt = new DataTable();
-                dt = crew.GetStoreProcSearch(crew.Nome);
+                dt = CrewListModel.GetStoreProcSearch(crew.Nome);
                 ViewData["TabelaTrip"] = dt;
                 return View();
             }

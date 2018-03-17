@@ -1,0 +1,3 @@
+@using CrewManTest
+@using CrewManTest.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

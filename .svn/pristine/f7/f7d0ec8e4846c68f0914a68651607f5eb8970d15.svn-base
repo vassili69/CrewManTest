@@ -1,0 +1,12 @@
+0000000000000000000000000000000000000000 4e0fc8d09525c52db89c114c3714e3f86597b306 psr <psr@SN1311EUS03619> 1519384837 +0000	commit (initial): Add .gitignore and .gitattributes.
+4e0fc8d09525c52db89c114c3714e3f86597b306 922bc9a6bcfdb7cc4710de30524f8dbbb88ab244 Pedro Serra <psr@portline.pt> 1519384874 +0000	commit: Add project files.
+922bc9a6bcfdb7cc4710de30524f8dbbb88ab244 123002d1dc769553303fcfd740538e7172cd6f9f Pedro Serra <psr@portline.pt> 1519493085 +0000	commit: algumas alteracoes
+123002d1dc769553303fcfd740538e7172cd6f9f cdd4dc79ff6d46ecd256d54efda17b196e9f087d Pedro Serra <psr@portline.pt> 1519655862 +0000	commit: lista_tripulantes
+cdd4dc79ff6d46ecd256d54efda17b196e9f087d 2fd71f5004e941e521fd7952cd3621f017a503bd Pedro Serra <psr@portline.pt> 1520243125 +0000	pull --verbose --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+2fd71f5004e941e521fd7952cd3621f017a503bd a69d60cf36aff6b8d6566b859e478a0ea62c05a4 Pedro Serra <psr@portline.pt> 1520268630 +0000	commit: LOGIN
+a69d60cf36aff6b8d6566b859e478a0ea62c05a4 5edf5e6c4ba55831f815e90d454b18766aedf86f Pedro Serra <psr@portline.pt> 1520356567 +0000	commit: login quase funcional
+5edf5e6c4ba55831f815e90d454b18766aedf86f fbd6e542441632e7e54e06479c923592a637f18e Pedro Serra <psr@portline.pt> 1520444034 +0000	commit: login continues
+fbd6e542441632e7e54e06479c923592a637f18e 5cad0eed357678a9e6dea12038f0e3bcb19075ad Pedro Serra <psr@portline.pt> 1520529703 +0000	commit: Login completo com session. fica so a faltar a seguranca da ligacao SSL
+5cad0eed357678a9e6dea12038f0e3bcb19075ad a6d776880f9238bbb379785da70088b63fe62774 Pedro Serra <psr@portline.pt> 1520616466 +0000	commit: trip. com erro de store procedure,
+a6d776880f9238bbb379785da70088b63fe62774 0178e7a519052eb592664d0993e72058d59539de Pedro Serra <psr@portline.pt> 1521039005 +0000	commit: LOGIN TERMINADO E CREWMEMBER TERMINADO
+0178e7a519052eb592664d0993e72058d59539de 5547282f200a3662e65881697c18e5fc6b5e3afe Pedro Serra <psr@portline.pt> 1521134014 +0000	commit: crewchange alteracoes
